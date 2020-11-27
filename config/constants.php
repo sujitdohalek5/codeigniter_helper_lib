@@ -1,16 +1,17 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+    defined('BASEPATH')         OR exit('No direct script access allowed');
 
-// Email function
-defined('protocol')       OR define('protocol', 'smtp');
-defined('smtp_host')      OR define('smtp_host', 'ssl://smtp.googlemail.com');
-defined('smtp_port')      OR define('smtp_port', '465');
-defined('smtp_timeout')   OR define('smtp_timeout', '30');
-defined('smtp_user')      OR define('smtp_user', 'innovac.gagan@gmail.com');
-defined('form')           OR define('form', 'innovac.gagan@gmail.com');
-defined('cc')             OR define('cc', 'gaganbansode@gmail.com');
-defined('form_name')      OR define('form_name', 'Innovac ');
-defined('smtp_pass')      OR define('smtp_pass', 'gagan@123');
-defined('mailtype')       OR define('mailtype', 'html');
-defined('email_flag')     OR define('email_flag', 1);
-// Email end
+    // Email function
+    defined('PROTOCOL')         OR define('PROTOCOL', 'smtp');
+    defined('SMTP_HOST')        OR define('SMTP_HOST', 'ssl://smtp.googlemail.com');
+    defined('SMTP_PORT')        OR define('SMTP_PORT', '465');
+    defined('SMTP_TIMEOUT')     OR define('SMTP_TIMEOUT', '30');
+    defined('SMTP_USER')        OR define('SMTP_USER', 'innovac.gagan@gmail.com');
+    defined('FORM')             OR define('FORM', 'innovac.gagan@gmail.com');
+    defined('CC')               OR define('CC', 'gaganbansode@gmail.com');
+    defined('FORM_NAME')        OR define('FORM_NAME', 'Innovac ');
+    defined('SMTP_PASS')        OR define('SMTP_PASS', 'gagan@123');
+    defined('CHARSET')          OR define('CHARSET', 'utf-8');
+    defined('MAILTYPE')         OR define('MAILTYPE', 'html');
+    defined('EMAIL_FLAG')       OR define('EMAIL_FLAG', 1);
+    // Email end
