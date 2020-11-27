@@ -1,38 +1,38 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+    defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Email_lib {
+    class Email_lib {
 
         public function some_method($arr = [])
         {   
-	    	if(email_flag==1){
-	        	$CI =& get_instance();
-	        	$CI->load->library('email');
-				$config['protocol']=protocol;
-				$config['smtp_host']=smtp_host;
-				$config['smtp_port']=smtp_port;
-				$config['smtp_timeout']=smtp_timeout;
-				$config['smtp_user']=smtp_user;
-				$config['smtp_pass']=smtp_pass;
-				$config['charset']='utf-8';
-				$config['newline']="\r\n";
-				$config['wordwrap'] = TRUE;
-				$config['mailtype'] = mailtype;
-				$CI->email->initialize($config);
-				$CI->email->from(form, form_name);
-				$CI->email->to($arr['to']);
-				$CI->email->cc(cc);
-				$CI->email->subject($arr['subject']);
-				$CI->email->message($arr['message']);
-				// $CI->email->send();
-				if($CI->email->send()){
-					return 1;
-				}else{
-					return 0;
-				}
-				
-			}else{
-				return 0;
-			}
+            if(EMAIL_FLAG == 1){
+                $CI =& get_instance();
+                $CI->load->library('email');
+                $config['PROTOCOL']         = PROTOCOL;
+                $config['SMTP_HOST']        = SMTP_HOST;
+                $config['SMTP_PORT']        = SMTP_PORT;
+                $config['SMTP_TIMEOUT']     = SMTP_TIMEOUT;
+                $config['SMTP_USER']        = SMTP_USER;
+                $config['SMTP_PASS']        = SMTP_PASS;
+                $config['charset']          = CHARSET;
+                $config['newline']          = "\r\n";
+                $config['wordwrap']         = TRUE;
+                $config['MAILTYPE']         = MAILTYPE;
+                $CI->email->initialize($config);
+                $CI->email->from(FORM, FORM_NAME);
+                $CI->email->to($arr['to']);
+                $CI->email->cc(CC);
+                $CI->email->subject($arr['subject']);
+                $CI->email->message($arr['message']);
+                
+                if($CI->email->send()){
+                    return 1;
+                }else{
+                    return 0;
+                }
+
+            }else{
+                return 0;
+            }
         }
-}
+    }
